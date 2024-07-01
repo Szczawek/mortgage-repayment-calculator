@@ -1,0 +1,99 @@
+::after,
+::before,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+  --main-component-radious: 1.2rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: transparent;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button,
+hr {
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0rem;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+body {
+  background-color: var(--Slate-100);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+#root  {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.root {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 50%);
+  width: clamp(320px, 100vw, 900px);
+}
+
+@media (width < 800px) {
+  .root {
+    width: auto;
+    grid-template-columns: 80%;
+    padding-block: 3rem;
+    grid-template-rows: repeat(2, max-content);
+  }
+}
+
+@media (width <= 560px) {
+  .root {
+    padding-block: 0;
+    grid-template-columns: 100%;
+  }
+  body {
+    justify-content: normal;
+  }
+}
