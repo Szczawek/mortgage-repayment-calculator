@@ -1,1 +1,1 @@
-# The project was create in 80%. I don't want to waste more time on it :/
+# 80%
